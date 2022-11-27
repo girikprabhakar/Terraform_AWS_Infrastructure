@@ -30,7 +30,7 @@ locals {
 }
 
 module "web_app" {
-  source = "../web-app-module"
+  source = "../../web-app-module"
 
   # Input Variables
   # bucket_name      = "tf-state-practice-26nov-${local.environment_name}"
