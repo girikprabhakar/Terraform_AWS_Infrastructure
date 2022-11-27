@@ -10,11 +10,11 @@ variable "app_name" {
   default     = "web-app"
 }
 
-variable "environment_name" {
-  description = "Deployment environment (dev/staging/production)"
-  type        = string
-  default     = "dev"
-}
+# variable "environment_name" {
+#   description = "Deployment environment (dev/staging/production)"
+#   type        = string
+#   default     = "dev"
+# }
 
 variable "ami" {
   description = "Amazon machine image to use for ec2 instance"
@@ -33,27 +33,27 @@ variable "instance_name" {
   type        = string
 }
 
-# S3 Variables
+# # S3 Variables
 
-variable "bucket_name" {
-  description = "name of s3 bucket for app data"
-  type        = string
-}
+# variable "bucket_name" {
+#   description = "name of s3 bucket for app data"
+#   type        = string
+# }
 
-# RDS Variables
+# # RDS Variables
 
-variable "db_name" {
-  description = "Name of DB"
-  type        = string
-}
+# variable "db_name" {
+#   description = "Name of DB"
+#   type        = string
+# }
 
-variable "db_user" {
-  description = "Username for DB"
-  type        = string
-}
+# variable "db_user" {
+#   description = "Username for DB"
+#   type        = string
+# }
 
-variable "db_pass" {
-  description = "Password for DB"
-  type        = string
-  sensitive   = true
-}
+# variable "db_pass" {
+#   description = "Password for DB"
+#   type        = string
+#   sensitive   = true
+# }

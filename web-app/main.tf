@@ -21,11 +21,11 @@ provider "aws" {
   region = "ca-central-1"
 }
 
-variable "db_pass_1" {
-  description = "password for database #1"
-  type        = string
-  sensitive   = true
-}
+# variable "db_pass_1" {
+#   description = "password for database #1"
+#   type        = string
+#   sensitive   = true
+# }
 
 # variable "db_pass_2" {
 #   description = "password for database #2"
@@ -37,14 +37,14 @@ module "web_app_1" {
   source = "../web-app-module"
 
   # Input Variables
-  bucket_name      = "tf-state-practice-26nov"
-  app_name         = "web-app-1"
-  environment_name = "production"
+  # bucket_name      = "tf-state-practice-26nov"
+  # app_name         = "web-app-1"
+  # environment_name = "production"
   instance_name    = "web-app-1"
   instance_type    = "t2.micro"
-  db_name          = "webapp1db"
-  db_user          = "foo"
-  db_pass          = var.db_pass_1
+  # db_name          = "webapp1db"
+  # db_user          = "foo"
+  # db_pass          = var.db_pass_1
 }
 
 # module "web_app_2" {

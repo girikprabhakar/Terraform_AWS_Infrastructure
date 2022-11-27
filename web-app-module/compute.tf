@@ -1,7 +1,7 @@
 resource "aws_instance" "instance_1" {
   ami             = var.ami
   instance_type   = var.instance_type
-  security_groups = [aws_security_group.instances.name]
+  security_groups = ["jenkins-master"]
   tags = {
     "Name" = var.instance_name
   }
