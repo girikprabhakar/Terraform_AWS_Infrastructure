@@ -80,11 +80,11 @@ jobs:
           
       - name: Terraform Apply Staging
         if: steps.check-tag.outputs.environment == 'staging' && github.event_name == 'push'
-        run: terraform apply --auto-approve
+        run: terraform apply --auto-approve 
 
-      - name: Terraform Apply Production
-        if: steps.check-tag.outputs.environment == 'production' && github.event_name == 'release'
-        working-directory: file-structure/production
-        run: |
-          terraform init
-          terraform apply --auto-approve
+      # - name: Terraform Apply Production
+      #   if: steps.check-tag.outputs.environment == 'production' && github.event_name == 'release'
+      #   working-directory: file-structure/production
+      #   run: |
+      #     terraform init
+      #     terraform apply --auto-approve
